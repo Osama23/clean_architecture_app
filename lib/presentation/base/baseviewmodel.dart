@@ -1,5 +1,5 @@
 
-// By this we can ovveride any function inside these abstract classes
+// By this we can override any function inside these abstract classes
 abstract class BaseViewModel extends BaseViewModelInputs with BaseViewModelOutputs{
   // shared variables and functions that will be used through any view model.
 }
