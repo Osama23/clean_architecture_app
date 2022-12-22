@@ -22,7 +22,7 @@ jobs:
           channel: "stable"
       - run: flutter pub get
       - run: flutter test
-      #- run: flutter analyze
+      #- run: flutter analyze anaylys
   build:
     name: Build & Release
     runs-on: macos-latest
@@ -37,6 +37,7 @@ jobs:
       - run: flutter pub get
       - run: flutter test
       - run: flutter build apk --debug --split-per-abi
+      - run: flutter build appbundle
       - run: |
           flutter build ios --no-codesign
           cd build/ios/iphoneos
@@ -60,3 +61,5 @@ jobs:
 # push to master, main, develop
 # pull request on main master
 # pull request on master branch
+
+#needs: [flutter_test]
